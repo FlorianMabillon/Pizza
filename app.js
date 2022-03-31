@@ -1,20 +1,31 @@
 let nbrPizza;
-let typePizza;
+let slcPizza;
+let typePizza = document.getElementById('slcPizza');
 let prixPizza;
 let remise;
 let totalPrix;
 
-typePizza = 'Fromage';
-nbrPizza = 6;
 
-if (typePizza === 'Reine'){
-    prixPizza = 10;
-} else if (typePizza === 'Calzone'){
-    prixPizza = 9;
-} else if (typePizza === 'Fromage'){
-    prixPizza = 8;
-} else{
-    prixPizza = 0 ;
+
+typePizza.addEventListener('change', pizzaSelect);
+
+function pizzaSelect(){
+    slcPizza = typePizza.value;
+    console.log(slcPizza);
+}
+
+switch(typePizza){
+    case 'Reine':
+        prixPizza = 10;
+        break;
+    case 'Calzone':
+        prixPizza = 9;
+        break
+    case 'Fromage':
+        prixPizza = 8;
+        break
+    default : 
+        prixPizza = 0;
 }
 
 if (nbrPizza <= 5){
@@ -24,6 +35,7 @@ if (nbrPizza <= 5){
 } else if (nbrPizza > 10){
     remise = 10;
 }
+
 totalPrix = prixPizza * nbrPizza - remise
 
 document.getElementById('commande__p__nbrPizza').textContent = `Vous avez commandé ${nbrPizza} pizzas`;
