@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+main{
+    padding: 20px;
+    margin: auto;
+    width: 40%;
+    height: auto;
+    background-color: wheat;
+    border-radius: 25px;
+}
+.remerciement{
+    margin:auto;
+}
+.commande{
+    width: 50%;
+    margin: auto;
+    padding: 10px 0; 
+}
